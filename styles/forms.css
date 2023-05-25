@@ -17,14 +17,14 @@ form{
 
 /* INPUTS */
 input{
-    height: 30px;
+    height: 35px;
     border: none;
     border-radius: 5px;
     margin-right: 10px;
     padding: 0 10px;
     box-sizing: border-box;
     font-family: var(--font-base);
-    font-weight: 300;
+    font-weight: 400;
     font-size: 15px;
 }
 
@@ -43,12 +43,25 @@ input.input-pass::placeholder, input.input-pass:hover{
     font-family: var(--font-base);
 }
 
+input:focus{
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    outline-color: rgb(0, 225, 255);
+    outline-style: solid;
+    outline-offset: 0px;
+    outline-width: 2px;
+    border: none;
+    color: white;
+    font-weight: 400;
+}
+
 input:valid:not(:focus){
-    background: transparent;
-    color: rgba(0,255,0, 0.8);
-    border: 1px solid rgba(0,255,0, 0.8);
+    background-color: rgba(0,130,255, 0.3);
+    color: rgba(0,130,255, 1);
+    border: none;
     transition: all 2s;
-    box-shadow: 0 0 5px 0 rgb(0,255,0);
+    box-shadow: 0 0 5px 0 rgb(0,130,255);
+    backdrop-filter: blur(3px);
 }
 
 input:required:invalid:not(:placeholder-shown):not(:focus){
@@ -60,23 +73,33 @@ input:required:invalid:not(:placeholder-shown):not(:focus){
 
 /* BUTTONS */
 button{
-    height: 30px;
+    height: 35px;
     border: none;
     border-radius: 5px;
     margin-right: 10px;
-    padding: 0 20px;
+    padding: 0 40px;
     box-sizing: border-box;
     font-family: var(--font-base);
     font-weight: 500;
     font-size: 15px;
     cursor: pointer;
-    filter: opacity(0.4) grayscale(0.5);
+    filter: opacity(0.8) grayscale(1);
+    backdrop-filter: blur(2px);
+    transition: all 2s;
 }
 
 button:hover{
-    filter: opacity(1) brightness(1.3) grayscale(0);
+    filter: opacity(1) brightness(1) grayscale(0);
+    transition: all 2s;
 }
 
-button.button-green{
-    background-color: rgb(0,255,0);
+.button-blue{
+    background-color: rgb(80, 185, 255);
+    transition: all 2s;
+}
+
+.button-blue:hover{
+    box-shadow: 0 0 10px 0 rgb(137, 208, 255);
+    color:aliceblue;
+    transition: all 1s;
 }
