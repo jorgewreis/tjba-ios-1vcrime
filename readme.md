@@ -5,7 +5,7 @@ Repositório para desenvolvimento e publicação de website para uso interno do 
 * 1.0.0
 
 ## Funcionalidades:
-* Nenhuma ainda;
+* Desenvolvimento da página inicial de login;
 
 ## Atualizações da Versão
 * Definições de pastas e configurações
