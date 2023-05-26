@@ -18,15 +18,15 @@
             <div class="container-text">
                 <h1 style="margin-top: 20vw;">Sistema de Gestão Processual</h1>
                 <h2>Primeira Vara Crime de Ilhéus</h2>
-                <form class="row g-3 needs-validation" novalidate style="display: flex; margin-top: 20px;">
+                <form class="row g-3 needs-validation" action="request/LoginConsultaUsuario.php" method="POST" novalidate style="display: flex; margin-top: 20px;">
                     <div class="col-md-4">
                         <label for="floatingInput" class="form-label" style="color: rgba(255,255,255,0.5); font-family: var(--font-base); font-size: 11px; margin-left: 15px;">Usuario</label>
-                        <input type="text" class="form-control" id="floatingInput" minlength="4" placeholder="username" required>                     
+                        <input type="text" name="login-nome" class="form-control" id="floatingInput" minlength="4" placeholder="username" required>                     
                         <div class="invalid-feedback">Informe o nome de usuário</div>
                     </div>
                     <div class="col-md-4">
                         <label for="floatingPassword" class="form-label" style="color: rgba(255,255,255,0.5); font-family: var(--font-base); font-size: 11px; margin-left: 15px;">Senha</label>
-                        <input type="password" class="form-control" id="floatingPassword" minlength="8" placeholder="password" required>
+                        <input type="password" name="login-senha" class="form-control" id="floatingPassword" minlength="8" placeholder="password" required>
                         <div class="invalid-feedback">Informe sua senha</div>
                     </div>
                     <div class="col-md-8">
