@@ -1,0 +1,17 @@
+@media screen and (min-device-width: 100px){
+    header{
+        background-color: rgba(0, 0, 0, 0.8);
+        min-height: 100px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+}
+
+@media screen and (min-device-width: 700px){
+}
+
+@media screen and (min-device-width: 1000px){
+}

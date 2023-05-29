@@ -9,10 +9,10 @@ class Database
     private function __construct()
     {
         # Informações sobre o banco de dados:
-        $db_host = "localhost";
-        $db_nome = "banco";
-        $db_usuario = "usuario";
-        $db_senha = "senha";
+        $db_host = "191.101.71.90";
+        $db_nome = "ios1_v4";
+        $db_usuario = "ios1_admin";
+        $db_senha = "Admi@187001.n";
         $db_driver = "mysql";
 
         # Informações sobre o sistema:

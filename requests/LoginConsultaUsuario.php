@@ -1,28 +1,23 @@
 <?php
 
 require_once '../db/Database.class.php';
+require_once '../db/User.class.php';
 
 $nome = $_POST["login-nome"];
 $senha = $_POST['login-senha'];
 
-$db = Database::conexao();
+$user = new User(null, $nome, $senha, null);
+$result = $user->verificaLogin($nome, $senha);
 
-$sql = "SELECT * FROM usuario WHERE nome = '$nome' AND senha = '$senha'";
-
-$result = $db->query($sql);
-
-// open home.php if user exists
-if ($result->num_rows > 0) {
+if ($result == true) {
     echo "<script>
         window.location.href = '../home.php';
     </script>";
 } else {
     echo "<script>
-        alert('Usuário não encontrado!');
-        window.location.href = '../index.php';
+        alert('Usuário não encontrado ou senha inválida!');
+        window.location.href = '../index.html';
     </script>";
 }
-
-$db->close();
 
 ?>
